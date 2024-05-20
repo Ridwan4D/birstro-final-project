@@ -2,13 +2,13 @@ import PropType from "prop-types";
 const MenuItemCard = ({item}) => {
     const {image,name,recipe,price} = item
     return (
-        <div className="flex items-center gap-4">
+        <div className="md:flex items-center gap-4 space-y-2">
             <div>
-                <img style={{borderRadius: '0 200px 200px 200px'}} src={image} alt="" width="100" />
+                <img className="md:w-28 md:rounded-tr-[200px] md:rounded-br-[200px] md:rounded-bl-[200px]" src={image} alt="" />
             </div>
             <div className="text-gray-400">
-                <h4 className="uppercase text-xl">{name}----------</h4>
-                <p>{recipe}</p>
+                <h4 className="uppercase md:text-xl">{name}----------</h4>
+                <p className="text-sm md:text-base">{recipe}</p>
             </div>
             <div>
                 <h4 className="text-[#BB8506] text-xl">${price}</h4>
